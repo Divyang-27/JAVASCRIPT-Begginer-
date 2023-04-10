@@ -1,0 +1,29 @@
+'use strict';
+
+process.stdin.setEncoding('utf-8');
+
+function has_passed(marks){
+        /*write the code to find the whether a candidate has passed or failed 
+        only print "pass" or "fail" */
+        marks = marks>=40 ? "pass": "fail"
+        console.log(marks);
+
+    
+    
+    
+}
+
+
+async function readInput() {
+        let inputString = '';
+        process.stdin.on('data', inputStdin => {
+            inputString += inputStdin;
+            const inputArr = inputString.split(/(?:\r\n|\r|\n)/g)
+            // console.log(inputArr);
+            has_passed(parseInt(inputArr[0]))
+            process.exit();
+
+        })
+
+}
+readInput();
