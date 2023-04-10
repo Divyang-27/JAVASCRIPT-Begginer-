@@ -1,0 +1,30 @@
+'use strict';
+
+process.stdin.setEncoding('utf-8');
+
+function max(a, b, c){
+    /*write the code to find the maximum between the three numbers below 
+     only print the maximum number  */
+    if (a>b && a>c){ 
+        console.log (a);
+    }
+    else if (b>a && b>c){
+        console.log(b);
+    }
+    else console.log(c);
+    
+    
+}
+async function readInput() {
+        let inputString = '';
+        process.stdin.on('data', inputStdin => {
+            inputString += inputStdin;
+            const inputArr = inputString.split(/(?:\r\n|\r|\n)/g)
+            // console.log(inputArr);
+            max(parseInt(inputArr[0]), parseInt(inputArr[1]), parseInt(inputArr[2]))
+            process.exit();
+
+        })
+
+}
+readInput();
